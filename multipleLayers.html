@@ -22,6 +22,8 @@ crossorigin=""></script>
 <!-- the following script will load the map and set the default view and zoom, as well as loading the
 basemap tiles -->
 <button id="loadData" name="loadData" onclick="loadEarthquakeData()">Click here to load the data </button>
+<button id="removeEarthquakeData" name="removeEarthquakeData"
+onclick="removeEarthquakeData()">Click here to remove the Earthquake data </button>
 
 <script>
 // load the map
@@ -68,6 +70,10 @@ var earthquakejson = JSON.parse(earthquakedata);
 earthquakelayer = L.geoJson(earthquakejson).addTo(mymap);
 // change the map zoom so that all the data is shown
 mymap.fitBounds(earthquakelayer.getBounds());
+}
+
+function removeEarthquakeData() {
+alert("remove the earthquake data here");
 }
 
 </script>
